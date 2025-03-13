@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.sidebar {
+    width: 256px;
+    height: 100vh; /* 视口高度 */
+    overflow-y: auto; /* 垂直滚动条 */
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(249, 249, 249, 0.76); /* 浅灰色背景 */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* 右侧阴影，增加立体感 */
+    font-family: 'Roboto', Arial, sans-serif; /* 现代易读字体 */
+}
+
+/* 自定义菜单样式 */
+.custom-menu-sidebar {
+    background-color: transparent; /* 背景透明，由父容器控制 */
+}
+
+/* 设置所有菜单项和子菜单标题的基础样式 */
+.custom-menu-sidebar .ant-menu-item,
+.custom-menu-sidebar .ant-menu-submenu-title {
+    color: #333333; /* 深灰色文字 */
+    font-size: 14px;
+    font-weight: 500; /* 中等粗细，增加可读性 */
+    padding: 12px 16px; /* 增加内边距，提升点击区域 */
+    position: relative; /* 为伪元素定位做准备 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 平滑过渡效果 */
+}
+
+/* 悬停时仅改变子菜单项的背景色 */
+.custom-menu-sidebar .ant-menu-item:hover,
+.custom-menu-sidebar .ant-menu-submenu-title:hover {
+    background-color: #e6e6e6; /* 悬停时的浅灰色背景 */
+}
+
+/* 选中项的样式 */
+.custom-menu-sidebar .ant-menu-item-selected {
+    background-color: #e6f7ff !important; /* 选中项的浅蓝色背景 */
+    color: rgba(24, 78, 255, 0.99); /* 选中项的蓝色文字 */
+}
+
+.custom-menu-sidebar .ant-menu-item-selected:hover {
+    background-color: #baffc0; /* 选中项悬停时的稍深蓝色背景 */
+}
+
+/* 子菜单展开的箭头颜色 */
+.custom-menu-sidebar .ant-menu-submenu-arrow {
+    color: #555555; /* 箭头颜色与文字保持一致 */
+    transition: color 0.3s ease;
+}
+
+.custom-menu-sidebar .ant-menu-item:hover .ant-menu-submenu-arrow,
+.custom-menu-sidebar .ant-menu-submenu-title:hover .ant-menu-submenu-arrow {
+    color: #1890ff; /* 悬停时箭头颜色变化 */
+}
+
+.custom-menu-sidebar .ant-menu-item-selected .ant-menu-submenu-arrow {
+    color: #1890ff; /* 选中项箭头颜色 */
+}
+
+/* 图标优化 */
+.custom-menu-sidebar .anticon {
+    font-size: 16px; /* 增大图标大小 */
+    color: #555555; /* 图标颜色与文字保持一致 */
+    margin-right: 8px; /* 图标与文字间距 */
+    transition: color 0.3s ease; /* 图标颜色过渡效果 */
+}
+
+.custom-menu-sidebar .ant-menu-item:hover .anticon,
+.custom-menu-sidebar .ant-menu-submenu-title:hover .anticon {
+    color: #1890ff; /* 悬停时图标颜色变化 */
+}
+
+.custom-menu-sidebar .ant-menu-item-selected .anticon {
+    color: #1890ff; /* 选中项图标颜色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* 缩小侧边栏宽度 */
+    }
+
+    .custom-menu-sidebar .ant-menu-item,
+    .custom-menu-sidebar .ant-menu-submenu-title {
+        font-size: 12px; /* 减小字体大小 */
+        padding: 10px 12px; /* 调整内边距 */
+    }
+
+    .custom-menu-sidebar .anticon {
+        font-size: 14px; /* 减小图标大小 */
+        margin-right: 6px; /* 调整图标间距 */
+    }
+}
+
+/* 侧边栏滚动条优化（可选） */
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* 滚动条宽度 */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 滚动条轨道颜色 */
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #c1c1c1; /* 滚动条滑块颜色 */
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0; /* 滚动条滑块悬停颜色 */
+}

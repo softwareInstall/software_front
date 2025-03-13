@@ -1,0 +1,144 @@
+.fullscreen-center {
+    height: 100vh; /* 视口高度 */
+    width: 100vw;  /* 视口宽度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* 柔和的渐变背景 */
+    /* 可选：如果需要覆盖其他样式 */
+    position: fixed; /* 确保覆盖整个视口 */
+    top: 0;
+    left: 0;
+}
+
+.loginContainer {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.loginCard {
+    background: linear-gradient(135deg, #ffffff, #f0f2f5);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out; /* 渐显动画 */
+}
+
+.loginTitle {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginInputGroup {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.loginLabel {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #aaa;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.loginInput {
+    padding: 12px 15px 12px 40px; /* 为图标留出空间 */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.loginInput:focus {
+    border-color: #1890ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(24, 144, 255, 0.5);
+    background-color: #fafafa;
+}
+
+.loginInput:focus + .loginLabel,
+.loginInput:not(:placeholder-shown) + .loginLabel {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #1890ff;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* 输入框图标（可选，需要引入图标库或使用字体图标） */
+/* 这里以伪元素示意，实际使用时建议使用图标库如 FontAwesome */
+.loginInputGroup::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.loginInputGroup.password::before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-3-3h-1a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h1a3 3 0 0 0 3-3zM5 8h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/></svg>');
+}
+
+/* 按钮样式 */
+.loginButton {
+    padding: 12px;
+    background: linear-gradient(135deg, #1890ff, #40a9ff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.loginButton:hover {
+    background: linear-gradient(135deg, #40a9ff, #1890ff);
+}
+
+.loginButton:active {
+    transform: translateY(2px);
+}
+
+.loginButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.5);
+}
+
+.loginFooter {
+    margin-top: 25px;
+    text-align: center;
+    color: #777;
+}
+
+.loginFooter a {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.loginFooter a:hover {
+    text-decoration: underline;
+}
+
+/* 简单的淡入动画 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

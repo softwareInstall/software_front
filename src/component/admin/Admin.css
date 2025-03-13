@@ -1,0 +1,35 @@
+.admin-container {
+    padding: 24px;
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+.admin-container .ant-form-item {
+    margin-bottom: 24px;
+}
+
+.admin-container .ant-upload-drag {
+    border: 2px dashed #2aae67;
+}
+
+.admin-container .ant-upload-drag:hover {
+    border-color: #52c41a;
+}
+
+.admin-container .ant-btn-primary {
+    background-color: #2aae67;
+    border-color: #2aae67;
+}
+
+.admin-container .ant-btn-primary:hover {
+    background-color: #52c41a;
+    border-color: #52c41a;
+}
+
+.admin-container .ant-select-selector {
+    border-radius: 4px !important;
+}
+
+.admin-container .ant-input {
+    border-radius: 4px;
+}

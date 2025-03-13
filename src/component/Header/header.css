@@ -1,0 +1,65 @@
+
+/* 覆盖 Menu 的背景色 */
+.header-menu-sidebar.ant-menu {
+    background-color: #2aae67 !important; /* 确保背景色为绿色 */
+}
+
+/* 设置 Menu 项的默认字体颜色 */
+.header-menu-sidebar .ant-menu-item {
+    color: #ccc; /* 灰白色 */
+    transition: color 0.3s; /* 平滑过渡效果 */
+}
+
+/* 设置 Menu 项悬停时的字体颜色 */
+.header-menu-sidebar .ant-menu-item:hover {
+    color: #ffffff !important; /* 白色 */
+    background-color: inherit !important; /* 背景色保持不变 */
+}
+
+/* 确保悬停状态下字体颜色不被其他样式覆盖 */
+.header-menu-sidebar .ant-menu-item:hover:not(.ant-menu-item-selected) {
+    color: #ffffff !important; /* 白色 */
+}
+
+/* 设置选中项的背景色为绿色，字体颜色为白色 */
+.header-menu-sidebar .ant-menu-item-selected {
+    background-color: #2aae67 !important; /* 保持绿色背景 */
+    color: #ffffff !important; /* 白色字体 */
+}
+
+.header-menu-sidebar .ant-menu-item-selected:hover {
+    background-color: #2aae67 !important; /* 保持绿色背景 */
+    color: #ffffff !important; /* 白色字体 */
+}
+
+/* 确保选中项的所有交互状态下字体颜色保持白色 */
+.header-menu-sidebar .ant-menu-item-selected,
+.header-menu-sidebar .ant-menu-item-selected:hover,
+.header-menu-sidebar .ant-menu-item-selected:active,
+.header-menu-sidebar .ant-menu-item-selected:focus {
+    color: #ffffff !important; /* 白色字体 */
+}
+
+/* 移除选中项的下划线（如果有） */
+.header-menu-sidebar .ant-menu-item-selected::after {
+    background-color: transparent !important; /* 移除默认的下划线颜色 */
+}
+
+/* 如果使用 SubMenu，也需要覆盖其样式 */
+.header-menu-sidebar .ant-menu-submenu-selected .ant-menu-submenu-title {
+    color: #ffffff !important;
+}
+
+.header-menu-sidebar .ant-menu-submenu-selected .ant-menu-submenu-title:hover {
+    color: #ffffff !important;
+}
+
+/* 确保没有其他样式覆盖选中项的字体颜色 */
+.header-menu-sidebar .ant-menu-item-selected .ant-menu-item-content {
+    color: #ffffff !important; /* 白色字体 */
+}
+
+/* 覆盖可能的默认悬停样式 */
+.header-menu-sidebar .ant-menu-item:hover .ant-menu-item-content {
+    color: #ffffff !important; /* 白色字体 */
+}

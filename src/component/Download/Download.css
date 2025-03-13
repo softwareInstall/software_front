@@ -1,0 +1,99 @@
+/* FaqDetail.css */
+
+.faq__detail {
+    padding: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9; /* 浅灰色背景，增加整体柔和感 */
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 柔和阴影 */
+    max-width: 700px; /* 限制最大宽度，提升可读性 */
+    margin: 0 auto; /* 居中显示 */
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 16px;
+    text-align: center;
+
+}
+
+.versions {
+    display: flex;
+    gap: 20px; /* 版本之间的间距 */
+    margin-bottom: 30px;
+}
+
+.version {
+    flex: 1;
+    background-color: #ffffff; /* 白色背景 */
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+}
+
+.version.current {
+    background-color: #fafafa; /* 当前版本稍浅的背景 */
+}
+
+.version h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+    margin-bottom: 12px;
+}
+
+.version p {
+    font-size: 14px;
+    color: #666666;
+    margin: 8px 0;
+}
+
+.version a {
+    color: #1890ff; /* Ant Design 主蓝色 */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.version a:hover {
+    text-decoration: underline;
+}
+
+.updates h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+.update-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444444;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .faq__detail {
+        padding: 15px;
+    }
+
+    .header h2 {
+        font-size: 24px;
+    }
+
+    .versions {
+        flex-direction: column; /* 在小屏幕上垂直排列版本 */
+    }
+
+    .version {
+        margin-bottom: 20px;
+    }
+
+    .version h3,
+    .update-content p,
+    .versions h3 {
+        font-size: 16px;
+    }
+}
